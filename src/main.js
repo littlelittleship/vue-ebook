@@ -6,6 +6,7 @@ import '@/assets/iconfont/iconfont.css'
 import '@/assets/font/LiuJianMaoCao-Regular.css'
 import '@/assets/font/LongCang-Regular.css'
 import '@/assets/font/MaShanZheng-Regular.css'
+import '@/assets/styles/global.scss'
 
 Vue.config.productionTip = false
 

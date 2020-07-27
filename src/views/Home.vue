@@ -2,7 +2,7 @@
     <div>
         <span class="iconfont">&#xe689;</span>
         <span class="iconfont">&#xe60b;</span>
-        <div style="fontSize:20px">使用了fontfamily</div>
+        <div style="fontSize:1rem">使用了fontfamily</div>
         <div class="font">使用了fontfamily</div>
         <div class="font1">使用了fontfamily</div>
         <div class="font2">使用了fontfamily</div>
@@ -30,15 +30,15 @@ export default {
 
 <style scoped>
 .font{
-    font-size: 20px;
+    font-size: 1rem;
     font-family: LiuJianMaoCao-Regular;
 }
 .font1{
-    font-size: 20px;
+    font-size: 1rem;
     font-family: LongCang-Regular;
 }
 .font2{
-    font-size: 20px;
+    font-size: 1rem;
     font-family: MaShanZheng-Regular;
 }
 </style>
