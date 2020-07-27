@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "LongCang-Regular";
+  src: url("LongCang-Regular.woff2") format("woff2"),
+       url("LongCang-Regular.woff") format("woff"),
+       url("LongCang-Regular.ttf") format("truetype"),
+       url("LongCang-Regular.eot") format("embedded-opentype"),
+       url("LongCang-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

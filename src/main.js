@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '@/assets/iconfont/iconfont.css'
-import '@/assets/fonts/easy.css'
-import '@/assets/fonts/LingLengLang.css'
-import '@/assets/fonts/Summer Vibes OTF.css'
+import '@/assets/font/LiuJianMaoCao-Regular.css'
+import '@/assets/font/LongCang-Regular.css'
+import '@/assets/font/MaShanZheng-Regular.css'
 
 Vue.config.productionTip = false
 

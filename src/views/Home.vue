@@ -31,14 +31,14 @@ export default {
 <style scoped>
 .font{
     font-size: 20px;
-    font-family: easy;
+    font-family: LiuJianMaoCao-Regular;
 }
 .font1{
     font-size: 20px;
-    font-family: Summer Vibes OTF;
+    font-family: LongCang-Regular;
 }
 .font2{
     font-size: 20px;
-    font-family: LingLengLang;
+    font-family: MaShanZheng-Regular;
 }
 </style>
