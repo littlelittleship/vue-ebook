@@ -16,5 +16,6 @@ module.exports = {
     'comma-dangle': 'off',
     'indent': 'off',
     'space-before-function-paren': 'off',
+    'no-trailing-spaces': 'off'
   }
 }
