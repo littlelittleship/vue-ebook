@@ -8,7 +8,30 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    redirect: '/homePage',
+    children: [
+      {
+        path: 'homePage',
+        name: 'homePage',
+        component: () => import('../views/homePage.vue')
+      },
+      {
+        path: 'bookCate',
+        name: 'bookCate',
+        component: () => import('../views/bookCate.vue')
+      },
+      {
+        path: 'category',
+        name: 'category',
+        component: () => import('../views/category.vue')
+      },
+      {
+        path: 'mine',
+        name: 'mine',
+        component: () => import('../views/mine.vue')
+      },
+    ]
   },
   // {
   //   path: '/about',

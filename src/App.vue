@@ -16,7 +16,6 @@
   const setFontSize = () => {
     const html = document.querySelector('html')
     let fontSize = window.innerWidth / 100
-    console.log(fontSize, 'fontSize')
     fontSize = fontSize > 50 ? 50 : fontSize
     html.style.fontSize = fontSize + 'px'
   }

@@ -1,23 +1,27 @@
 <template>
-    <div>
-        <span class="iconfont">&#xe689;</span>
-        <span class="iconfont">&#xe60b;</span>
-        <div style="fontSize:1rem">使用了fontfamily</div>
-        <div class="font">使用了fontfamily</div>
-        <div class="font1">使用了fontfamily</div>
-        <div class="font2">使用了fontfamily</div>
-        <!-- <button @click="handleClick">点击</button>
-        <button @click="handleClick1">点击2</button>
-        <transition name="slide-down">
-            <div class="active" v-if="show">
-                
+    <div class="home">
+        <div class="home_content">
+            <router-view></router-view>
+        </div>
+
+        <div class="home_page">
+            <div class="home_page_item" :class="selectItem === 1 ? 'home_page_item_selected' : ''" @click="handleclick(1)">
+                <span class="icon iconfont">&#xe624;</span>
+                <div class="name">首页</div>
             </div>
-        </transition> -->
-        <!-- <div class="fa">
-            <div class="son1">1</div>
-            <div class="son2">2</div>
-        </div> -->
-        
+            <div class="home_page_item" :class="selectItem === 2 ? 'home_page_item_selected' : ''" @click="handleclick(2)">
+                <span class="icon iconfont">&#xe608;</span>
+                <div class="name">分类</div>
+            </div>
+            <div class="home_page_item" :class="selectItem === 3 ? 'home_page_item_selected' : ''" @click="handleclick(3)">
+                <span class="icon iconfont">&#xe65d;</span>
+                <div class="name">书架</div>
+            </div>
+            <div class="home_page_item" :class="selectItem === 4 ? 'home_page_item_selected' : ''" @click="handleclick(4)">
+                <span class="icon iconfont">&#xe601;</span>
+                <div class="name">我的</div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -25,8 +29,7 @@
 export default {
     data() {
         return {
-            show: true,
-            show1: true,
+            selectItem: 1,
         }
     },
     created() {
@@ -36,52 +39,55 @@ export default {
 
     },
     methods: {
-        handleClick() {
-            this.show = !this.show
+        handleclick(val) {
+            var path = ''
+            if (val === 1) { 
+                path = '/homePage'
+                this.selectItem = 1 
+            }
+            if (val === 2) { 
+                path = '/bookCate'
+                this.selectItem = 2 
+            }
+            if (val === 3) { 
+                path = '/category'
+                this.selectItem = 3 
+            }
+            if (val === 4) { 
+                path = '/mine'
+                this.selectItem = 4 
+            }
+            this.$router.push({ path })
         },
-        handleClick1() {
-            this.show1 = !this.show1
-        }
     }
 }
 </script>
 
 <style scoped lang="scss">
 @import '@/assets/styles/global.scss';
-.font{
-    font-size: px2rem(75);
-    font-family: LiuJianMaoCao-Regular;
-}
-.font1{
-    font-size: px2rem(75);
-    font-family: LongCang-Regular;
-}
-.font2{
-    font-size: px2rem(75);
-    font-family: MaShanZheng-Regular;
-}
-.active{
-    background-color: aqua;
-    width: 300px;
-    height: 300px;
-}
-.active1{
-    background-color: red;
-    width: 300px;
-    height: 300px;
-}
-.fa {
-    background-color: #fff;
-    @include center;
-}
-.son1 {
-    width: 200px;
-    height: 200px;
-    background-color: orange;
-}
-.son2 {
-    width: 300px;
-    height: 300px;
-    background-color: blue;
+.home {
+    position: relative;
+    .home_page {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        border-top: 1px solid aqua;
+        box-shadow: 0 5px 5px 5px aqua;
+        border-radius: 20px 20px 0 0;
+        font-size: px2rem(37.5*3);
+        width: 100%;
+        height: 60px;
+        @include spaceBetween;
+        .home_page_item {
+            padding: 10px 0;
+            flex-direction: column;
+            @include center;
+            justify-content: space-around;
+        }
+        .home_page_item_selected{
+            font-size: px2rem(37.5*4);
+            color: aqua;
+        }
+    }
 }
 </style>

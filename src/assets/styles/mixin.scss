@@ -27,3 +27,8 @@ $ratio: 375 / 10;
   overflow: hidden;
   white-space: nowrap;
 }
+
+@mixin spaceBetween {
+  display: flex;
+  justify-content: space-around;
+}
